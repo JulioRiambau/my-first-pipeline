@@ -2,7 +2,7 @@ pipeline {
     agent { node { label 'windows' }  }
     stages {
         stage('test') {
-            timeout(10)
+            steps
             {
                 def returnStatus = bat(
                     label: "Run Ranorex test",
