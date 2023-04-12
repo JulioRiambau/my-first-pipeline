@@ -17,7 +17,7 @@ pipeline {
                     } 
                     else 
                     {
-                        println("Ranorex test failed to execute.")
+                        error("Ranorex test failed to execute.")
                     }
                 } 
             }
