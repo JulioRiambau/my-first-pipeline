@@ -2,10 +2,10 @@ pipeline {
     agent { node { label 'windows' }  }
     stages {
         stage('test') {
-            steps
-            {
-                step
-                {
+            steps{
+                echo 'Starting Ranorex test'
+
+                script{
                     def returnStatus = bat(
                         label: "Run Ranorex test",
                         script: "C:\\Work\\Projects\\Ranorex\\CassandraMigration\\CassandraMigration\\bin\\Debug\\CassandraMigration.exe",
@@ -19,8 +19,7 @@ pipeline {
                     {
                         println("Ranorex test failed to execute.")
                     }
-                }
-                
+                } 
             }
         }
     }
