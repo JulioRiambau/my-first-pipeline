@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat 'java -version'
+                bat 'C:\Work\Projects\Ranorex\CassandraMigration\CassandraMigration\bin\Debug\CassandraMigration.exe'
             }
         }
     }
